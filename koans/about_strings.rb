@@ -37,12 +37,12 @@ class AboutStrings < Neo::Koan
 
   def test_flexible_quotes_can_handle_multiple_lines
     long_string = %{
-It was the best of times,
-It was the worst of times.
-}
-    assert_equal __, long_string.length
-    assert_equal __, long_string.lines.count
-    assert_equal __, long_string[0,1]
+      It was the best of times,
+      It was the worst of times.
+    }
+    assert_equal 70, long_string.length
+    assert_equal 4, long_string.lines.count
+    assert_equal "\n", long_string[0,1]
   end
 
   def test_here_documents_can_also_handle_multiple_lines
